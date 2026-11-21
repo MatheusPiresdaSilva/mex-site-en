@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MEX — your business finances, finally on track</title>
+<meta name="description" content="Bills to pay and to receive, orders, stock, receipts and WhatsApp payment reminders. A desktop app with no monthly fee, made for micro-entrepreneurs.">
+<meta property="og:title" content="MEX — finances for the small guy">
+<meta property="og:description" content="Your business finances, finally on track. No monthly fee, no internet, no hassle.">
+<meta name="theme-color" content="#0b0b0b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://matheuspiresdasilva.github.io/mex-site-en/">
+<meta property="og:image" content="https://matheuspiresdasilva.github.io/mex-site-en/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MEX — Your business finances, finally on track.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="pt-BR" href="https://matheuspiresdasilva.github.io/mex-site/">
+<link rel="alternate" hreflang="en" href="https://matheuspiresdasilva.github.io/mex-site-en/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/InstrumentSerif-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Geist-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><i></i></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="MEX, home"><span>MEX</span></a>
+  <nav class="links">
+    <a href="#features">Features</a>
+    <a href="#orders">Orders</a>
+    <a href="#game">Achievements</a>
+    <a href="#security">Security</a>
+    <a href="#price">Price</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="btn pri sm" href="#price" data-buy>Get MEX</a>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">MEX</div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker reveal"><span class="dot"></span> For freelancers, solo founders and micro businesses</p>
+      <h1 class="h-hero">
+        <span class="line"><span>Your business</span></span>
+        <span class="line"><span>finances,</span></span>
+        <span class="line"><span><em>finally</em> on track.</span></span>
+      </h1>
+      <p class="lead reveal">Bills to pay and to receive, orders, stock, receipts and WhatsApp payment reminders — in a beautiful app that runs on your computer and speaks plain language. <b>No monthly fee. No internet. No spreadsheets.</b></p>
+      <div class="cta-row reveal">
+        <a class="btn pri lg mag" href="#price" data-buy><span>Get my cash flow in order</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost lg" href="#demo">Try it right here ↓</a>
+      </div>
+      <ul class="hero-facts reveal">
+        <li><b>R$ 0</b><span>monthly fee</span></li>
+        <li><b>100%</b><span>offline</span></li>
+        <li><b>84</b><span>achievements</span></li>
+      </ul>
+    </div>
+
+    <!-- interactive demo -->
+    <div class="demo-wrap reveal" id="demo">
+      <div class="hint" id="hint">tap the ✓ <svg viewBox="0 0 40 40"><path d="M4 6c14 2 24 12 26 28M30 34l-6-5M30 34l4-7"/></svg></div>
+      <div class="win" role="region" aria-label="MEX demo">
+        <div class="win-bar"><span></span><span></span><span></span><b>MEX</b></div>
+        <div class="win-body">
+          <aside class="w-side">
+            <div class="w-logo">ME<i>X</i></div>
+            <i class="on"></i><i></i><i></i><i></i><i></i><i></i>
+            <div class="w-lv"><span id="dLv">7</span><div class="w-xp"><i id="dXp" style="width:42%"></i></div></div>
+          </aside>
+          <div class="w-main">
+            <div class="w-greet">Good afternoon, <em>Ana</em>.</div>
+            <div class="w-bal"><small>You have today</small><b id="dBal">R$ 8,420.00</b></div>
+            <div class="w-head"><span>Due today</span><span id="dLeft">4 bills</span></div>
+            <div class="w-list" id="dList">
+              <div class="w-row" data-v="-120000" data-t="pagar"><span class="ti out">↗</span><div><b>Shop rent</b><small>Fixed · Rent</small></div><em>− R$ 1,200.00</em><button aria-label="Pay rent"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="12950" data-t="receber"><span class="ti in">↙</span><div><b>Order #48 · Maria</b><small>Cakes · Sales</small></div><em>+ R$ 129.50</em><button aria-label="Receive order"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="-38000" data-t="pagar"><span class="ti out">↗</span><div><b>Silva Packaging</b><small>Suppliers</small></div><em>− R$ 380.00</em><button aria-label="Pay supplier"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="45000" data-t="receber"><span class="ti in">↙</span><div><b>Decor · Lucas's party</b><small>Services</small></div><em>+ R$ 450.00</em><button aria-label="Receive service"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+            </div>
+            <button class="w-reset" id="dReset" hidden>↺ again</button>
+          </div>
+        </div>
+      </div>
+      <p class="demo-cap">A miniature of the real MEX. Go ahead, tap it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true"><div class="mq-track">
+  <span>Bills to pay</span><i>✦</i><span>Money to receive</span><i>✦</i><span>Orders</span><i>✦</i><span>Stock</span><i>✦</i><span>Receipts</span><i>✦</i><span>WhatsApp reminders</span><i>✦</i><span>Cash flow</span><i>✦</i><span>Reports</span><i>✦</i><span>Automatic backup</span><i>✦</i><span>Monthly goals</span><i>✦</i>
+  <span>Bills to pay</span><i>✦</i><span>Money to receive</span><i>✦</i><span>Orders</span><i>✦</i><span>Stock</span><i>✦</i><span>Receipts</span><i>✦</i><span>WhatsApp reminders</span><i>✦</i><span>Cash flow</span><i>✦</i><span>Reports</span><i>✦</i><span>Automatic backup</span><i>✦</i><span>Monthly goals</span><i>✦</i>
+</div></div>
+
+<!-- ============ PAIN ============ -->
+<section class="sec pain">
+  <div class="wrap">
+    <h2 class="h2 reveal">Notebooks, spreadsheets and memory<br><em>can't keep up</em> with your business.</h2>
+    <div class="pain-grid">
+      <div class="pain-card reveal"><span class="pn">01</span><p class="strike">“I think I already paid that bill…”</p><p>MEX shows what's due today and what's already late. Paid it? One tap and you're done.</p></div>
+      <div class="pain-card reveal"><span class="pn">02</span><p class="strike">“Who owes me again?”</p><p>Everything you're owed, by whom and when — and the reminder is ready to send on WhatsApp.</p></div>
+      <div class="pain-card reveal"><span class="pn">03</span><p class="strike">“At the end of the month, did I make or lose money?”</p><p>Balance, monthly profit and where every real went, in words anyone understands.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section class="sec calc-sec">
+  <div class="wrap calc">
+    <div class="calc-copy reveal">
+      <p class="eyebrow">Do the math</p>
+      <h2 class="h2">How much does paying late<br><em>cost you</em> a year?</h2>
+      <p class="muted">In Brazil, a late bill usually comes with a 2% fine plus 1% interest per month. Sounds small. Move the sliders and see.</p>
+      <div class="sl"><label>Bills paid late per month <b id="cN">5</b></label><input type="range" id="iN" min="1" max="20" value="5"></div>
+      <div class="sl"><label>Average amount per bill <b id="cV">R$ 800</b></label><input type="range" id="iV" min="50" max="5000" step="50" value="800"></div>
+      <div class="sl"><label>Average days late <b id="cD">15 days</b></label><input type="range" id="iD" min="1" max="30" value="15"></div>
+    </div>
+    <div class="calc-out reveal">
+      <small>You throw away, every year</small>
+      <div class="big" id="cOut">R$ 0</div>
+      <p id="cMsg">—</p>
+      <a class="btn inv lg" href="#price" data-buy>Stop losing money</a>
+      <span class="fine">Rough estimate: 2% fine + 1% monthly interest, prorated by day.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="sec" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">All in one place</p>
+      <h2 class="h2">Everything a finance system has.<br><em>Explained like a human.</em></h2>
+    </div>
+    <div class="bento">
+      <article class="b-card b-wide reveal">
+        <div class="b-txt"><h3>Bills to pay <em>and to receive</em></h3><p>Add them in seconds. Installments? Repeats every month? MEX creates them all. On the day, it reminds you — and paying is one tap on the ✓.</p></div>
+        <div class="b-vis rows">
+          <div class="r late"><span>Late</span><b>Electricity bill</b><em>R$ 214.30</em></div>
+          <div class="r"><span>Today</span><b>Rent</b><em>R$ 1,200.00</em></div>
+          <div class="r in"><span>Tomorrow</span><b>Order #49 · João</b><em>+ R$ 545.00</em></div>
+          <div class="r paid"><span>Paid ✓</span><b>Internet</b><em>R$ 99.90</em></div>
+        </div>
+      </article>
+      <article class="b-card reveal">
+        <div class="b-txt"><h3>Receipts, <em>ready</em></h3><p>With the amount spelled out in words. Print it or save it as a PDF.</p></div>
+        <div class="b-vis receipt"><div class="rc-h"><i>Receipt</i><b>R$ 129.50</b></div><p>Received from <b>Maria Souza</b> the amount of <b>R$ 129.50</b> <em>(one hundred twenty-nine reais and fifty centavos)</em>…</p><div class="rc-sign"></div></div>
+      </article>
+      <article class="b-card reveal">
+        <div class="b-txt"><h3>Remind on <em>WhatsApp</em></h3><p>A polite message with the amount, the due date and your Pix key. Just hit send.</p></div>
+        <div class="b-vis chat"><div class="bubble">Hi, Maria! Just a reminder about the payment due on <b>11/22</b>: <b>R$ 129.50</b>. Pix key: <b>ana@pix.com</b> 😊</div><div class="typing"><i></i><i></i><i></i></div></div>
+      </article>
+      <article class="b-card reveal">
+        <div class="b-txt"><h3>Products with <em>profit on screen</em></h3><p>Enter the price and what it costs you. MEX shows how much you make on every sale.</p></div>
+        <div class="b-vis prod"><div class="p-top"><span class="pbox"></span><b>Cake in a jar</b></div><div class="p-price">R$ 12<sup>.00</sup><small>/ unit</small></div><div class="p-m">✦ You make <b>R$ 7.50</b> (63%)</div></div>
+      </article>
+      <article class="b-card reveal">
+        <div class="b-txt"><h3>Cash flow <em>and reports</em></h3><p>Monthly profit, where the money went and what's coming next.</p></div>
+        <div class="b-vis line"><svg viewBox="0 0 300 120" preserveAspectRatio="none"><path class="area" d="M0 95 C40 90 60 70 90 74 S150 40 180 48 S240 20 300 14 V120 H0Z"/><path class="ln" d="M0 95 C40 90 60 70 90 74 S150 40 180 48 S240 20 300 14"/></svg></div>
+      </article>
+      <article class="b-card reveal">
+        <div class="b-txt"><h3>Categories <em>your way</em></h3><p>Ready out of the box. Rename, add, archive. Reports adjust on their own.</p></div>
+        <div class="b-vis tree"><span>Expenses</span><span class="t1">Fixed</span><span class="t2">Rent</span><span class="t2">Internet</span><span class="t1">Suppliers</span><span class="t2">Packaging</span></div>
+      </article>
+      <article class="b-card b-wide reveal">
+        <div class="b-txt"><h3>Goals and limits <em>that keep you in check</em></h3><p>Say how much you want to earn this month and track it. Set a spending limit per category: MEX warns you when you get close — and celebrates when you hit your goal.</p></div>
+        <div class="b-vis goal"><div class="ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50"/><circle class="pr" cx="60" cy="60" r="50"/></svg><b>82%</b></div><div class="lims"><div><span>Fuel</span><i style="--w:64%"></i></div><div><span>Packaging</span><i style="--w:91%"></i></div><div><span>Marketing</span><i style="--w:38%"></i></div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ORDERS ============ -->
+<section class="sec inv" id="orders">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">New in MEX 2</p>
+      <h2 class="h2">From quote<br>to <em>delivery</em>.</h2>
+      <p class="lead-s">Write down what each customer ordered. Track it on a board: <b>New → In progress → Ready → Delivered</b>. Delivered? Stock goes down on its own and the payment to receive is already there.</p>
+      <ul class="ticks">
+        <li><span>Product and service catalog with price and margin</span></li>
+        <li><span>Quotes and orders as PDF or on WhatsApp</span></li>
+        <li><span>Low-stock alerts</span></li>
+        <li><span><b>Demand</b> tab: what you still need to make today, tomorrow and this week</span></li>
+        <li><span>Customers who went quiet — so you can win them back</span></li>
+      </ul>
+    </div>
+    <div class="kb reveal" aria-hidden="true">
+      <div class="kc"><h5>New <span>2</span></h5><div class="oc" style="--d:0s"><small>#51 · deliver today</small><b>João Lima</b><span>3× Birthday cake</span><em>R$ 545.00</em></div><div class="oc ghost"><small>#52 · Sat, Nov 23</small><b>Central Bakery</b><span>200 Brigadeiros</span><em>R$ 180.00</em></div></div>
+      <div class="kc"><h5>In progress <span>1</span></h5><div class="oc mover"><small>#50 · tomorrow</small><b>Maria Souza</b><span>3× Cake in a jar · 100 Brigadeiros</span><em>R$ 129.50</em></div></div>
+      <div class="kc"><h5>Ready <span>1</span></h5><div class="oc"><small>#49 · deliver today</small><b>Lucas's party</b><span>Table decor</span><em>R$ 450.00</em><i class="go">✓ Deliver</i></div></div>
+    </div>
+  </div>
+  <div class="wrap demand reveal">
+    <div class="dm-card"><h4>Still to <em>make</em></h4>
+      <table><thead><tr><th>Item</th><th>Today</th><th>Tomorrow</th><th>7 days</th></tr></thead>
+      <tbody><tr><td>Cake in a jar</td><td><b>12</b></td><td>8</td><td>30</td></tr><tr><td>Brigadeiros (100)</td><td><b>3</b></td><td>·</td><td>5</td></tr><tr><td>Lime pie</td><td>·</td><td>2</td><td>4</td></tr></tbody></table></div>
+    <div class="dm-card"><h4>Best <em>sellers</em></h4>
+      <div class="hb"><span>Cake in a jar <i>↑67%</i></span><b>84 units</b><em style="--w:100%"></em></div>
+      <div class="hb"><span>Lime pie <i>↑12%</i></span><b>41 units</b><em style="--w:49%"></em></div>
+      <div class="hb"><span>Brigadeiros <i>↓8%</i></span><b>2,200</b><em style="--w:26%"></em></div></div>
+    <div class="dm-card"><h4>Sales, <em>6 months</em></h4>
+      <div class="vb"><i style="--h:42%"></i><i style="--h:55%"></i><i style="--h:38%"></i><i style="--h:80%"></i><i style="--h:66%"></i><i class="cur" style="--h:92%"></i></div></div>
+  </div>
+</section>
+
+<!-- ============ GAME ============ -->
+<section class="sec game" id="game">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The secret to sticking with it</p>
+      <h2 class="h2">Managing money<br>became a <em>game</em>.</h2>
+      <p class="muted center">Every bill paid on time earns points. You level up, earn titles and unlock achievements — some take <b>years</b>. It's the kind of thing that makes you open the app every day.</p>
+    </div>
+    <div class="game-grid">
+      <div class="lvl reveal">
+        <div class="lv-top"><span class="lv-n" data-count="12">0</span><div><small>Level</small><b>Strategist</b></div></div>
+        <div class="xp"><i></i></div>
+        <div class="lv-foot"><span>8,240 XP</span><span>560 to level 13</span></div>
+        <ol class="ladder"><li>Apprentice</li><li>Tidy</li><li>Organized</li><li>Controller</li><li class="on">Strategist</li><li>Cash master</li><li>Tycoon</li><li>MEX Legend</li></ol>
+      </div>
+      <div class="badges reveal">
+        <div class="bd t1"><span class="bi">✓</span><small>Bronze</small><b>Bill paid</b><p>Marked your first bill as paid.</p></div>
+        <div class="bd t2"><span class="bi">◆</span><small>Silver</small><b>Regulars</b><p>Delivered 50 orders.</p></div>
+        <div class="bd t3"><span class="bi">★</span><small>Gold</small><b>Iron quarter</b><p>90 days in a row with nothing late.</p></div>
+        <div class="bd t4"><span class="bi">♛</span><small>Legendary</small><b>Part of the routine</b><p>Opened MEX on 365 different days.</p></div>
+        <div class="bd sec"><span class="bi">?</span><small>Secret</small><b>???</b><p>Only shows up once you get it.</p></div>
+        <div class="bd t2"><span class="bi">↑</span><small>Silver</small><b>Smooth talker</b><p>20 quotes turned into orders.</p></div>
+      </div>
+    </div>
+    <div class="game-nums reveal">
+      <div><b data-count="84">0</b><span>achievements</span></div>
+      <div><b data-count="4">0</b><span>rarities</span></div>
+      <div><b data-count="5">0</b><span>secret ones</span></div>
+      <div><b data-count="8">0</b><span>level titles</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY ============ -->
+<section class="sec inv" id="security">
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Your money, your data</p>
+      <h2 class="h2">Nothing leaves<br>your <em>computer</em>.</h2>
+      <p class="lead-s">MEX doesn't depend on the internet or on anyone's servers. Your numbers live in a file that's yours, protected by <b>7 layers</b> against loss and snooping.</p>
+    </div>
+    <ol class="vault reveal">
+      <li><b>Power-cut-proof saving</b><span>Writes to a copy and only swaps it in when everything checks out. Never a half-written file.</span></li>
+      <li><b>Previous version always kept</b><span>If something goes wrong, the previous save is right there.</span></li>
+      <li><b>Automatic integrity check</b><span>Every save carries a digital signature. If the file ever gets corrupted, MEX notices and recovers on its own.</span></li>
+      <li><b>Daily backup</b><span>One copy a day, kept for 90 days.</span></li>
+      <li><b>Cloud copy, if you want</b><span>Point it to a Google Drive or OneDrive folder and every backup goes there too.</span></li>
+      <li><b>Trash, undo and time machine</b><span>Deleted something by mistake? Bring it back. Ctrl+Z works too.</span></li>
+      <li><b>Password and PIN</b><span>Backups encrypted with AES-256 and a PIN to open the app.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ LANGUAGE ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">No accounting jargon</p>
+      <h2 class="h2">Made for people who <em>aren't accountants</em>.</h2>
+    </div>
+    <div class="dict reveal">
+      <div><s>Outstanding accounts payable</s><b>“What's leaving your pocket”</b></div>
+      <div><s>Delinquency</s><b>“Who owes you and is late”</b></div>
+      <div><s>Net income for the period</s><b>“Did you make or lose money?”</b></div>
+      <div><s>Cost center</s><b>“Split shop, delivery and market stall”</b></div>
+      <div><s>Balance reconciliation</s><b>“How much is in each account”</b></div>
+      <div><s>Settlement of receivables</s><b>“Tap the ✓”</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section class="sec cmp-sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Compare</p><h2 class="h2">Why <em>MEX</em>?</h2></div>
+    <div class="cmp-w reveal">
+      <table class="cmp">
+        <thead><tr><th></th><th class="me">MEX</th><th>Notebook</th><th>Spreadsheet</th><th>Online software</th></tr></thead>
+        <tbody>
+          <tr><td>Reminds you what's due today</td><td class="me">✓</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Orders, stock and demand</td><td class="me">✓</td><td>—</td><td>lots of work</td><td>sometimes</td></tr>
+          <tr><td>Receipts and WhatsApp reminders</td><td class="me">✓</td><td>—</td><td>—</td><td>sometimes</td></tr>
+          <tr><td>Works without internet</td><td class="me">✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+          <tr><td>Your data stays with you</td><td class="me">✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+          <tr><td>No monthly fee</td><td class="me">✓</td><td>✓</td><td>✓</td><td>—</td></tr>
+          <tr><td>Automatic backup</td><td class="me">✓</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Makes you want to use it every day</td><td class="me">✓</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec steps-sec">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Getting started is quick</p><h2 class="h2">Three steps. <em>Five minutes.</em></h2></div>
+    <div class="steps">
+      <div class="step reveal"><span>1</span><h4>Download MEX</h4><p>After you buy, you get the link. A single 12 MB file.</p></div>
+      <div class="step reveal"><span>2</span><h4>Double-click</h4><p>It opens in its own window, like any other app. No installing a dozen things.</p></div>
+      <div class="step reveal"><span>3</span><h4>Add your first bill</h4><p>Press <kbd>P</kbd> for a bill to pay or <kbd>R</kbd> for money to receive. That's it: you're in control.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE ============ -->
+<!-- To change the price, edit the values below. Payment link and WhatsApp live in js/site.js (MEX_SITE). -->
+<section class="sec price-sec" id="price">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">Price</p><h2 class="h2">Pay <em>once</em>.<br>Use it forever.</h2></div>
+    <div class="price-card reveal">
+      <div class="pc-l">
+        <span class="tag">Full license</span>
+        <h3>MEX <em>2</em></h3>
+        <div class="pc-price"><s>R$ 297</s><b>R$ <span>197</span></b><small>one-time payment · or in installments by card</small></div>
+        <a class="btn pri lg block mag" href="#price" data-buy><span>Buy MEX now</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="fine">7-day guarantee: don't like it, get your money back.</p>
+      </div>
+      <ul class="pc-r">
+        <li>Bills to pay and to receive, installments and repeats</li>
+        <li>Orders, quotes, catalog and stock</li>
+        <li>Customers, suppliers, bank accounts and cost centers</li>
+        <li>Cash flow, reports and categories</li>
+        <li>Receipts with the amount in words and WhatsApp reminders</li>
+        <li>Monthly goals and spending limits</li>
+        <li>Automatic backup, cloud copy and encryption</li>
+        <li>84 achievements, levels and titles</li>
+        <li>No monthly fee, no internet</li>
+      </ul>
+    </div>
+    <p class="req reveal">Runs on <b>Windows 10 and 11</b> (64-bit). Prices in Brazilian reais (BRL).</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap faq-w">
+    <div class="sec-head reveal"><p class="eyebrow">FAQ</p><h2 class="h2">Real <em>questions</em>.</h2></div>
+    <div class="faq">
+      <details class="reveal" open><summary>Is the app in English?</summary><p>Not yet. The MEX app itself is in Brazilian Portuguese and is built for Brazilian small businesses: amounts in reais (R$), Pix keys, MEI and WhatsApp reminders.</p></details>
+      <details class="reveal"><summary>Does it need the internet?</summary><p>No. MEX runs 100% on your computer. The internet is only used if you choose to send a reminder on WhatsApp or keep your backup in a cloud folder.</p></details>
+      <details class="reveal"><summary>Is there a monthly fee?</summary><p>No. You pay once and the app is yours.</p></details>
+      <details class="reveal"><summary>Where is my data stored?</summary><p>In a file on your computer, in the Documents\MEX folder. Nobody but you has access to it.</p></details>
+      <details class="reveal"><summary>What if my computer breaks?</summary><p>MEX makes a backup every day. If you turn on the copy to a Google Drive or OneDrive folder, your data is in the cloud too. On a new computer, just open MEX and restore the backup.</p></details>
+      <details class="reveal"><summary>Is it a good fit for a MEI?</summary><p>It was built with Brazilian MEIs (individual micro-entrepreneurs), freelancers, service providers and small shops in mind: people who need control without the hassle.</p></details>
+      <details class="reveal"><summary>Does MEX issue invoices?</summary><p>No. MEX handles your finances: money in, money out, orders and reminders. Invoices (nota fiscal) are still issued in your city's or the tax office's system.</p></details>
+      <details class="reveal"><summary>Does it work on Mac or on my phone?</summary><p>For now, only on Windows 10 and 11.</p></details>
+      <details class="reveal"><summary>I don't know anything about finance. Will I manage?</summary><p>It was made for you. No accounting jargon: there's built-in help with questions and answers and a dictionary that translates everything.</p></details>
+      <details class="reveal"><summary>What if I don't like it?</summary><p>You have 7 days to ask for your money back.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="h-final reveal">Ready to get your<br>cash flow <em>on track</em>?</h2>
+    <a class="btn inv lg mag reveal" href="#price" data-buy><span>Get MEX</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="final-mark" aria-hidden="true">MEX.</div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="logo" href="#top" aria-label="MEX, home"><span>MEX</span></a>
+    <span>finances for the small guy</span>
+    <a href="#" data-wa hidden>Talk to us on WhatsApp</a>
+    <a href="https://matheuspiresdasilva.github.io/mex-site/" hreflang="pt-BR" lang="pt-BR">Versão em português</a>
+    <span class="muted">© <span id="yr">2026</span> MEX</span>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><div><small>MEX 2 · one-time payment</small><b>R$ 197</b></div><a class="btn pri" href="#price" data-buy>Buy</a></div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
