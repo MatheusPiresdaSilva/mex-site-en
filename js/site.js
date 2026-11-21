@@ -10,14 +10,14 @@
 const MEX_SITE = {
   checkout: '',
   whatsapp: '',
-  price: 197,
+  price: 39,
 };
 
 (function () {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const brl = (c, cents = true) => (c < 0 ? '− ' : '') + 'R$ ' + (Math.abs(c) / 100).toLocaleString('en-US', { minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 });
+  const brl = (c, cents = true) => (c < 0 ? '− ' : '') + '$' + (Math.abs(c) / 100).toLocaleString('en-US', { minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 });
 
   /* ---------- links de compra e WhatsApp ---------- */
   if (MEX_SITE.checkout) $$('[data-buy]').forEach((a) => { a.href = MEX_SITE.checkout; a.target = '_blank'; a.rel = 'noopener'; });
@@ -165,7 +165,7 @@ const MEX_SITE = {
   function calc() {
     [iN, iV, iD].forEach(paint);
     const n = +iN.value, v = +iV.value, d = +iD.value;
-    $('#cN').textContent = n; $('#cV').textContent = 'R$ ' + v.toLocaleString('en-US'); $('#cD').textContent = d + (d === 1 ? ' day' : ' days');
+    $('#cN').textContent = n; $('#cV').textContent = '$' + v.toLocaleString('en-US'); $('#cD').textContent = d + (d === 1 ? ' day' : ' days');
     const perBill = v * (0.02 + 0.01 * (d / 30));
     const year = Math.round(perBill * n * 12 * 100);
     const from = outShown, t0 = performance.now();

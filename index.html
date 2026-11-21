@@ -64,7 +64,7 @@
         <a class="btn ghost lg" href="#demo">Try it right here ↓</a>
       </div>
       <ul class="hero-facts reveal">
-        <li><b>R$ 0</b><span>monthly fee</span></li>
+        <li><b>$0</b><span>monthly fee</span></li>
         <li><b>100%</b><span>offline</span></li>
         <li><b>84</b><span>achievements</span></li>
       </ul>
@@ -83,13 +83,13 @@
           </aside>
           <div class="w-main">
             <div class="w-greet">Good afternoon, <em>Ana</em>.</div>
-            <div class="w-bal"><small>You have today</small><b id="dBal">R$ 8,420.00</b></div>
+            <div class="w-bal"><small>You have today</small><b id="dBal">$8,420.00</b></div>
             <div class="w-head"><span>Due today</span><span id="dLeft">4 bills</span></div>
             <div class="w-list" id="dList">
-              <div class="w-row" data-v="-120000" data-t="pagar"><span class="ti out">↗</span><div><b>Shop rent</b><small>Fixed · Rent</small></div><em>− R$ 1,200.00</em><button aria-label="Pay rent"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
-              <div class="w-row" data-v="12950" data-t="receber"><span class="ti in">↙</span><div><b>Order #48 · Maria</b><small>Cakes · Sales</small></div><em>+ R$ 129.50</em><button aria-label="Receive order"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
-              <div class="w-row" data-v="-38000" data-t="pagar"><span class="ti out">↗</span><div><b>Silva Packaging</b><small>Suppliers</small></div><em>− R$ 380.00</em><button aria-label="Pay supplier"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
-              <div class="w-row" data-v="45000" data-t="receber"><span class="ti in">↙</span><div><b>Decor · Lucas's party</b><small>Services</small></div><em>+ R$ 450.00</em><button aria-label="Receive service"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="-120000" data-t="pagar"><span class="ti out">↗</span><div><b>Shop rent</b><small>Fixed · Rent</small></div><em>− $1,200.00</em><button aria-label="Pay rent"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="12950" data-t="receber"><span class="ti in">↙</span><div><b>Order #48 · Maria</b><small>Cakes · Sales</small></div><em>+ $129.50</em><button aria-label="Receive order"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="-38000" data-t="pagar"><span class="ti out">↗</span><div><b>Silva Packaging</b><small>Suppliers</small></div><em>− $380.00</em><button aria-label="Pay supplier"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+              <div class="w-row" data-v="45000" data-t="receber"><span class="ti in">↙</span><div><b>Decor · Lucas's party</b><small>Services</small></div><em>+ $450.00</em><button aria-label="Receive service"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
             </div>
             <button class="w-reset" id="dReset" hidden>↺ again</button>
           </div>
@@ -113,7 +113,7 @@
     <div class="pain-grid">
       <div class="pain-card reveal"><span class="pn">01</span><p class="strike">“I think I already paid that bill…”</p><p>MEX shows what's due today and what's already late. Paid it? One tap and you're done.</p></div>
       <div class="pain-card reveal"><span class="pn">02</span><p class="strike">“Who owes me again?”</p><p>Everything you're owed, by whom and when — and the reminder is ready to send on WhatsApp.</p></div>
-      <div class="pain-card reveal"><span class="pn">03</span><p class="strike">“At the end of the month, did I make or lose money?”</p><p>Balance, monthly profit and where every real went, in words anyone understands.</p></div>
+      <div class="pain-card reveal"><span class="pn">03</span><p class="strike">“At the end of the month, did I make or lose money?”</p><p>Balance, monthly profit and where every dollar went, in words anyone understands.</p></div>
     </div>
   </div>
 </section>
@@ -124,17 +124,17 @@
     <div class="calc-copy reveal">
       <p class="eyebrow">Do the math</p>
       <h2 class="h2">How much does paying late<br><em>cost you</em> a year?</h2>
-      <p class="muted">In Brazil, a late bill usually comes with a 2% fine plus 1% interest per month. Sounds small. Move the sliders and see.</p>
+      <p class="muted">A late bill usually comes with a late fee plus interest — say 2% plus 1% a month. Sounds small. Move the sliders and see.</p>
       <div class="sl"><label>Bills paid late per month <b id="cN">5</b></label><input type="range" id="iN" min="1" max="20" value="5"></div>
-      <div class="sl"><label>Average amount per bill <b id="cV">R$ 800</b></label><input type="range" id="iV" min="50" max="5000" step="50" value="800"></div>
+      <div class="sl"><label>Average amount per bill <b id="cV">$800</b></label><input type="range" id="iV" min="50" max="5000" step="50" value="800"></div>
       <div class="sl"><label>Average days late <b id="cD">15 days</b></label><input type="range" id="iD" min="1" max="30" value="15"></div>
     </div>
     <div class="calc-out reveal">
       <small>You throw away, every year</small>
-      <div class="big" id="cOut">R$ 0</div>
+      <div class="big" id="cOut">$0</div>
       <p id="cMsg">—</p>
       <a class="btn inv lg" href="#price" data-buy>Stop losing money</a>
-      <span class="fine">Rough estimate: 2% fine + 1% monthly interest, prorated by day.</span>
+      <span class="fine">Rough estimate: 2% late fee + 1% monthly interest, prorated by day.</span>
     </div>
   </div>
 </section>
@@ -150,23 +150,23 @@
       <article class="b-card b-wide reveal">
         <div class="b-txt"><h3>Bills to pay <em>and to receive</em></h3><p>Add them in seconds. Installments? Repeats every month? MEX creates them all. On the day, it reminds you — and paying is one tap on the ✓.</p></div>
         <div class="b-vis rows">
-          <div class="r late"><span>Late</span><b>Electricity bill</b><em>R$ 214.30</em></div>
-          <div class="r"><span>Today</span><b>Rent</b><em>R$ 1,200.00</em></div>
-          <div class="r in"><span>Tomorrow</span><b>Order #49 · João</b><em>+ R$ 545.00</em></div>
-          <div class="r paid"><span>Paid ✓</span><b>Internet</b><em>R$ 99.90</em></div>
+          <div class="r late"><span>Late</span><b>Electricity bill</b><em>$214.30</em></div>
+          <div class="r"><span>Today</span><b>Rent</b><em>$1,200.00</em></div>
+          <div class="r in"><span>Tomorrow</span><b>Order #49 · João</b><em>+ $545.00</em></div>
+          <div class="r paid"><span>Paid ✓</span><b>Internet</b><em>$99.90</em></div>
         </div>
       </article>
       <article class="b-card reveal">
         <div class="b-txt"><h3>Receipts, <em>ready</em></h3><p>With the amount spelled out in words. Print it or save it as a PDF.</p></div>
-        <div class="b-vis receipt"><div class="rc-h"><i>Receipt</i><b>R$ 129.50</b></div><p>Received from <b>Maria Souza</b> the amount of <b>R$ 129.50</b> <em>(one hundred twenty-nine reais and fifty centavos)</em>…</p><div class="rc-sign"></div></div>
+        <div class="b-vis receipt"><div class="rc-h"><i>Receipt</i><b>$129.50</b></div><p>Received from <b>Maria Souza</b> the amount of <b>$129.50</b> <em>(one hundred twenty-nine dollars and fifty cents)</em>…</p><div class="rc-sign"></div></div>
       </article>
       <article class="b-card reveal">
         <div class="b-txt"><h3>Remind on <em>WhatsApp</em></h3><p>A polite message with the amount, the due date and your Pix key. Just hit send.</p></div>
-        <div class="b-vis chat"><div class="bubble">Hi, Maria! Just a reminder about the payment due on <b>11/22</b>: <b>R$ 129.50</b>. Pix key: <b>ana@pix.com</b> 😊</div><div class="typing"><i></i><i></i><i></i></div></div>
+        <div class="b-vis chat"><div class="bubble">Hi, Maria! Just a reminder about the payment due on <b>11/22</b>: <b>$129.50</b>. Pix key: <b>ana@pix.com</b> 😊</div><div class="typing"><i></i><i></i><i></i></div></div>
       </article>
       <article class="b-card reveal">
         <div class="b-txt"><h3>Products with <em>profit on screen</em></h3><p>Enter the price and what it costs you. MEX shows how much you make on every sale.</p></div>
-        <div class="b-vis prod"><div class="p-top"><span class="pbox"></span><b>Cake in a jar</b></div><div class="p-price">R$ 12<sup>.00</sup><small>/ unit</small></div><div class="p-m">✦ You make <b>R$ 7.50</b> (63%)</div></div>
+        <div class="b-vis prod"><div class="p-top"><span class="pbox"></span><b>Cake in a jar</b></div><div class="p-price">$12<sup>.00</sup><small>/ unit</small></div><div class="p-m">✦ You make <b>$7.50</b> (63%)</div></div>
       </article>
       <article class="b-card reveal">
         <div class="b-txt"><h3>Cash flow <em>and reports</em></h3><p>Monthly profit, where the money went and what's coming next.</p></div>
@@ -200,9 +200,9 @@
       </ul>
     </div>
     <div class="kb reveal" aria-hidden="true">
-      <div class="kc"><h5>New <span>2</span></h5><div class="oc" style="--d:0s"><small>#51 · deliver today</small><b>João Lima</b><span>3× Birthday cake</span><em>R$ 545.00</em></div><div class="oc ghost"><small>#52 · Sat, Nov 23</small><b>Central Bakery</b><span>200 Brigadeiros</span><em>R$ 180.00</em></div></div>
-      <div class="kc"><h5>In progress <span>1</span></h5><div class="oc mover"><small>#50 · tomorrow</small><b>Maria Souza</b><span>3× Cake in a jar · 100 Brigadeiros</span><em>R$ 129.50</em></div></div>
-      <div class="kc"><h5>Ready <span>1</span></h5><div class="oc"><small>#49 · deliver today</small><b>Lucas's party</b><span>Table decor</span><em>R$ 450.00</em><i class="go">✓ Deliver</i></div></div>
+      <div class="kc"><h5>New <span>2</span></h5><div class="oc" style="--d:0s"><small>#51 · deliver today</small><b>João Lima</b><span>3× Birthday cake</span><em>$545.00</em></div><div class="oc ghost"><small>#52 · Sat, Nov 23</small><b>Central Bakery</b><span>200 Brigadeiros</span><em>$180.00</em></div></div>
+      <div class="kc"><h5>In progress <span>1</span></h5><div class="oc mover"><small>#50 · tomorrow</small><b>Maria Souza</b><span>3× Cake in a jar · 100 Brigadeiros</span><em>$129.50</em></div></div>
+      <div class="kc"><h5>Ready <span>1</span></h5><div class="oc"><small>#49 · deliver today</small><b>Lucas's party</b><span>Table decor</span><em>$450.00</em><i class="go">✓ Deliver</i></div></div>
     </div>
   </div>
   <div class="wrap demand reveal">
@@ -332,7 +332,7 @@
       <div class="pc-l">
         <span class="tag">Full license</span>
         <h3>MEX <em>2</em></h3>
-        <div class="pc-price"><s>R$ 297</s><b>R$ <span>197</span></b><small>one-time payment · or in installments by card</small></div>
+        <div class="pc-price"><s>$59</s><b>$<span>39</span></b><small>one-time payment · US dollars</small></div>
         <a class="btn pri lg block mag" href="#price" data-buy><span>Buy MEX now</span><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <p class="fine">7-day guarantee: don't like it, get your money back.</p>
       </div>
@@ -348,7 +348,7 @@
         <li>No monthly fee, no internet</li>
       </ul>
     </div>
-    <p class="req reveal">Runs on <b>Windows 10 and 11</b> (64-bit). Prices in Brazilian reais (BRL).</p>
+    <p class="req reveal">Runs on <b>Windows 10 and 11</b> (64-bit). Prices in US dollars (USD).</p>
   </div>
 </section>
 
@@ -357,7 +357,7 @@
   <div class="wrap faq-w">
     <div class="sec-head reveal"><p class="eyebrow">FAQ</p><h2 class="h2">Real <em>questions</em>.</h2></div>
     <div class="faq">
-      <details class="reveal" open><summary>Is the app in English?</summary><p>Not yet. The MEX app itself is in Brazilian Portuguese and is built for Brazilian small businesses: amounts in reais (R$), Pix keys, MEI and WhatsApp reminders.</p></details>
+      <details class="reveal" open><summary>Is the app in English?</summary><p>Not yet. The MEX app itself is in Brazilian Portuguese and is built for Brazilian small businesses: inside the app, amounts are shown in Brazilian reais (R$), with Pix keys, MEI and WhatsApp reminders.</p></details>
       <details class="reveal"><summary>Does it need the internet?</summary><p>No. MEX runs 100% on your computer. The internet is only used if you choose to send a reminder on WhatsApp or keep your backup in a cloud folder.</p></details>
       <details class="reveal"><summary>Is there a monthly fee?</summary><p>No. You pay once and the app is yours.</p></details>
       <details class="reveal"><summary>Where is my data stored?</summary><p>In a file on your computer, in the Documents\MEX folder. Nobody but you has access to it.</p></details>
@@ -391,7 +391,7 @@
   </div>
 </footer>
 
-<div class="mbar" id="mbar"><div><small>MEX 2 · one-time payment</small><b>R$ 197</b></div><a class="btn pri" href="#price" data-buy>Buy</a></div>
+<div class="mbar" id="mbar"><div><small>MEX 2 · one-time payment</small><b>$39</b></div><a class="btn pri" href="#price" data-buy>Buy</a></div>
 
 <script src="js/site.js"></script>
 </body>
